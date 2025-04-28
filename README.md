@@ -14,10 +14,19 @@ Follow the step to setup a pfSense VM in virtualbox
 https://github.com/AyanMK/pfsense_setup
 ```
 
-### PfSense log forwarding to server
+## PfSense log forwarding to server
 
 1. After login go to	Status > System Logs
+<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_1.png?raw=true">
 
+2. Then go to settings:
+<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_2.png?raw=true">
 
+3. Scroll down and enable remote logging
+<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_3.png?raw=true">
 
-2. 
+4. Scroll down and set the IP of the server (which will store the logs)
+<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_4.png?raw=true">
+
+5. Then save.
+<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_5.png?raw=true">
