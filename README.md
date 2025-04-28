@@ -16,7 +16,7 @@ https://github.com/AyanMK/pfsense_setup
 
 
 ## PfSense log forwarding to server
-Note: Before doing this you must setu an Ubuntu server/OS.
+Note: Before doing this you must setup an Ubuntu server or OS.
 
 1. After login go to	Status > System Logs
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_1.png?raw=true">
