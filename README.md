@@ -15,7 +15,7 @@ https://github.com/AyanMK/pfsense_setup
 ```
 Then,
 
-## PfSense log forwarding to server
+## PfSense log forwarding to the server
 Note: Before doing this you must setup an Ubuntu server or OS.
 
 1. After login to the pfSense Dashboard
