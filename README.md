@@ -8,7 +8,7 @@
 
 ## pfSense setup guideline
 
-Follow the step of under github link to setup pfSense VM in virtualbox
+Follow the step of under github link to setup pfSense in virtualbox
 
 ```bash
 https://github.com/AyanMK/pfsense_setup
