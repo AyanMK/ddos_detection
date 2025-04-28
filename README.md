@@ -8,13 +8,15 @@
 
 ## pfSense setup guideline
 
-Follow the step to setup a pfSense VM in virtualbox
+Follow the step to setup pfSense VM in virtualbox
 
 ```bash
 https://github.com/AyanMK/pfsense_setup
 ```
 
+
 ## PfSense log forwarding to server
+Note: Before doing this you must setu an Ubuntu server/OS.
 
 1. After login go to	Status > System Logs
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_1.png?raw=true">
