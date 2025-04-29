@@ -51,8 +51,13 @@ Note: Before doing this you must setup an Ubuntu server or OS.
 Check the output log here!
 
 # SIME setup
-## Usage
+## System Requirements
+Before running the script, please ensure that your system meets the following requirements:
+- Ubuntu OS
+- Minimum 4GB of RAM
+- Minimum 20GB of free disk space
 
+## Usage
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/AyanMK/ddos_detection/
