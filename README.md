@@ -15,6 +15,7 @@ https://github.com/AyanMK/pfsense_setup
 ```
 Then,
 # Ubuntu server setup
+Ubuntu server or OS setup in virtualbox. For our R&D we used ubuntu OS. Ubuntu server & OS both works fine. Ensure those system requirements. Server network mustbe under pfSense and ensure internet connectivity of the server.
 ## - System requirements
 - Processor: 2 core
 - RAM: 4GB (Minimum)
