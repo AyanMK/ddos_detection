@@ -6,7 +6,7 @@
 
 
 
-## pfSense setup guideline
+# pfSense setup guideline
 
 Follow the step of under github link to setup pfSense in virtualbox
 
@@ -14,6 +14,11 @@ Follow the step of under github link to setup pfSense in virtualbox
 https://github.com/AyanMK/pfsense_setup
 ```
 Then,
+# Ubuntu server setup
+## System requirements
+- Processor: 2 core
+- RAM: 4GB (Minimum)
+- Disk space 20GB (Minimum)
 
 ## PfSense log forwarding to the server
 Note: Before doing this you must setup an Ubuntu server or OS.
