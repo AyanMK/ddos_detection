@@ -20,7 +20,7 @@ Then,
 - RAM: 4GB (Minimum)
 - Disk space 20GB (Minimum)
 
-## PfSense log forwarding to the server
+# PfSense log forwarding to the server
 Note: Before doing this you must setup an Ubuntu server or OS.
 
 1. After login to the pfSense Dashboard
