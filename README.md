@@ -20,6 +20,9 @@ Then,
 - RAM: 4GB (Minimum)
 - Disk space 20GB (Minimum)
 
+## Network
+Network adapters 1:	"Internal Network"
+
 # PfSense log forwarding to the server
 Note: Before doing this you must setup an Ubuntu server or OS.
 
