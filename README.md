@@ -24,7 +24,7 @@ Ubuntu server or OS setup in virtualbox. For our R&D we used ubuntu OS. Ubuntu s
 ## - Network
 Network adapters 1:	"Internal Network"
 
-Note: After setting up server, enable pfSense log forwarding to this server
+Note: After setting up server, enable pfSense log forwarding to that server
 
 # PfSense log forwarding to the server
 Note: Before doing this you must setup an Ubuntu server or OS.
@@ -50,4 +50,22 @@ Note: Before doing this you must setup an Ubuntu server or OS.
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/server_log_capture.png?raw=true">
 Check the output log here!
 
-## SIME setup
+# SIME setup
+## Usage
+
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/AyanMK/ddos_detection/
+   ```
+2. Navigate to the repository's directory:
+   ```bash
+   cd ddos_detection
+   ```
+3. Make the setup_script.sh executable:
+   ```bash
+   chmod +x setup_script.sh
+   ```
+4. Execute the setup_script.sh:
+   ```bash
+   ./setup_script.sh
+   ```
