@@ -15,12 +15,12 @@ https://github.com/AyanMK/pfsense_setup
 ```
 Then,
 # Ubuntu server setup
-## System requirements
+## - System requirements
 - Processor: 2 core
 - RAM: 4GB (Minimum)
 - Disk space 20GB (Minimum)
 
-## Network
+## - Network
 Network adapters 1:	"Internal Network"
 
 Note: After setting up server, enable pfSense log forwarding to this server
