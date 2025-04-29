@@ -23,6 +23,8 @@ Then,
 ## Network
 Network adapters 1:	"Internal Network"
 
+Note: After setting up server, enable pfSense log forwarding to this server
+
 # PfSense log forwarding to the server
 Note: Before doing this you must setup an Ubuntu server or OS.
 
