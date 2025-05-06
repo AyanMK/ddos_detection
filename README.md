@@ -3,9 +3,6 @@
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/overview.jpg?raw=true">
 
 
-
-
-
 # pfSense setup guideline
 
 Follow the step of under github link to setup pfSense in virtualbox
@@ -24,7 +21,7 @@ Ubuntu server or OS setup in virtualbox. For our R&D we used ubuntu OS. Ubuntu s
 ## - Network
 Network adapters 1:	"Internal Network"
 
-Note: After setting up server, enable pfSense log forwarding to that server
+Note: After setting up server, enable pfSense to forward its log to that server
 
 # PfSense log forwarding to the server
 Note: Before doing this you must setup an Ubuntu server or OS.
