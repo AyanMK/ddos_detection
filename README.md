@@ -78,6 +78,7 @@ Note: Just type "y" and setup will start.
 
 
 # Setting up “Rsyslog” in SIEM server
+Rsyslog is needed to capture those log inside the server.
 By default ubuntu OS/ubuntu server have already “rsyslog”
 1. To check that, type
 ```bash
