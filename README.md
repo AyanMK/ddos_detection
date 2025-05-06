@@ -146,6 +146,7 @@ or,
    nano filebeat.yaml
 ```
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_file_configuration.png?raw=true">
+
 12. Now Type in this location
 ```bash
    - /var/log/remotelogs/192.168.1.1/*.log
