@@ -130,7 +130,7 @@ or,
 9. Then our remote log will stored on this location “/var/log/remotelogs/192.168.1.1/”
 ```bash
    Cd /var/log/remotelogs/192.168.1.1/
-	  ls
+   ls
 ```
 10. Now add this “/var/log/remotelogs/192.168.1.1/” path to “filebeat.yaml” file
 ```bash
