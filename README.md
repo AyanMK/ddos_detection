@@ -74,3 +74,4 @@ Before running the script, please ensure that your system meets the following re
    ```bash
    ./setup_script.sh
    ```
+<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/SIEM setup.png?raw=true">
