@@ -50,6 +50,57 @@ Note: Before doing this you must setup an Ubuntu server or OS.
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/server_log_capture.png?raw=true">
 Check the output log here!
 
+# Setting up “Rsyslog server”
+By default ubuntu OS/ubuntu server have already “rsyslog”
+
+1. To check that, type
+```bash
+   rsyslogd -v 
+```
+or,
+```bash
+   systemctl status rsyslog
+```
+
+2. Now enable server firewall port to receive logs
+```bash
+   Sudo ufw allow 514/udp
+```
+
+3. Then check those services
+```bash
+   netstat -4altunp | grep 514
+```
+
+4. 
+```bash
+   netstat -4altunp | grep 514
+```
+
+5. Now edit rsyslog.conf file
+```bash
+   nano /etc/rsyslog.conf
+```
+
+6. Then copy and pest those commands
+```bash
+   # provides UDP syslog reception
+module(load="imudp")
+input(type="imudp" port="514")
+
+# provides TCP syslog reception
+module(load="imtcp")
+input(type="imtcp" port="514")
+
+#Custom template to generate the log filename dynamically based on the client's IP address.
+$template RemInputLogs, "/var/log/remotelogs/%FROMHOST-IP%/%PROGRAMNAME%.log" 
+*.* ?RemInputLogs
+
+```
+
+
+7.  
+
 # SIME setup
 ## System Requirements
 Before running the script, please ensure that your system meets the following requirements:
