@@ -85,16 +85,16 @@ or,
 6. Then copy and pest those commands
 ```bash
    # provides UDP syslog reception
-module(load="imudp")
-input(type="imudp" port="514")
-
-# provides TCP syslog reception
-module(load="imtcp")
-input(type="imtcp" port="514")
-
-#Custom template to generate the log filename dynamically based on the client's IP address.
-$template RemInputLogs, "/var/log/remotelogs/%FROMHOST-IP%/%PROGRAMNAME%.log" 
-*.* ?RemInputLogs
+   module(load="imudp")
+   input(type="imudp" port="514")
+   
+   # provides TCP syslog reception
+   module(load="imtcp")
+   input(type="imtcp" port="514")
+   
+   #Custom template to generate the log filename dynamically based on the client's IP address.
+   $template RemInputLogs, "/var/log/remotelogs/%FROMHOST-IP%/%PROGRAMNAME%.log" 
+   *.* ?RemInputLogs
 
 ```
 
