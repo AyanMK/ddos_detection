@@ -145,6 +145,7 @@ or,
    - /var/log/remotelogs/192.168.1.1/*.log
 ```
 Note: "192.168.1.1" this is pfsense IP
+
 12. Now restart the filebeat
 ```bash
    filebeat setup -e
