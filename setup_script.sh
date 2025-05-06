@@ -69,9 +69,7 @@ welcome_message() {
   figlet "SIEM & HIDS Setup" | lolcat
   echo -e "${GREEN}This script will help you set up a security monitoring environment.${NC}"
   echo "It includes the following components:"
-  echo "1. SIEM (Elasticsearch, Kibana, Filebeat)"
-  echo "2. NIDS (Suricata)"
-  echo "3. HIDS (Wazuh Manager)"
+  echo "SIEM (Elasticsearch, Kibana, Filebeat)"
   echo "The SIEM will be installed with Elasticsearch version 7.17.13 and Wazuh version 4.5, as they were compatible during the script creation."
 }
 
