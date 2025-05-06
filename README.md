@@ -134,23 +134,18 @@ or,
 ```
 10. Now add this “/var/log/remotelogs/192.168.1.1/” path to “filebeat.yaml” file
 ```bash
-   Cd /var/log/remotelogs/192.168.1.1/
-	  ls
-```
-11. Now add this “/var/log/remotelogs/192.168.1.1/” path to “filebeat.yaml” file
-```bash
    Cd /etc/filebeat/
    ls	
    nano filebeat.yaml
 ```
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_file_configuration.png?raw=true">
 
-12. Now Type in this location
+11. Now Type in this location
 ```bash
    - /var/log/remotelogs/192.168.1.1/*.log
 ```
 Note: "192.168.1.1" this is pfsense IP
-13. Now restart the filebeat
+12. Now restart the filebeat
 ```bash
    filebeat setup -e
    systemctl restart filebeat
