@@ -24,7 +24,7 @@ Network adapters 1:	"Internal Network"
 Note: After setting up server, enable pfSense to forward its log to that server
 
 # PfSense log forwarding to the server
-Note: Before doing this you must setup an Ubuntu server or OS.
+Note: Before doing this you must setup an Ubuntu server or OS. Which must set under the pfsense internal network 
 
 1. After login to the pfSense Dashboard
 2. Go to	"Status" > "System Logs"
