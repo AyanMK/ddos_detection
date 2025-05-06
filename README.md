@@ -50,56 +50,7 @@ Note: Before doing this you must setup an Ubuntu server or OS.
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/server_log_capture.png?raw=true">
 Check the output log here!
 
-# Setting up “Rsyslog server”
-By default ubuntu OS/ubuntu server have already “rsyslog”
 
-1. To check that, type
-```bash
-   rsyslogd -v 
-```
-or,
-```bash
-   systemctl status rsyslog
-```
-
-2. Now enable server firewall port to receive logs
-```bash
-   Sudo ufw allow 514/udp
-```
-
-3. Then check those services
-```bash
-   netstat -4altunp | grep 514
-```
-
-4. 
-```bash
-   netstat -4altunp | grep 514
-```
-
-5. Now edit rsyslog.conf file
-```bash
-   nano /etc/rsyslog.conf
-```
-
-6. Then copy and pest those commands
-```bash
-   # provides UDP syslog reception
-   module(load="imudp")
-   input(type="imudp" port="514")
-   
-   # provides TCP syslog reception
-   module(load="imtcp")
-   input(type="imtcp" port="514")
-   
-   #Custom template to generate the log filename dynamically based on the client's IP address.
-   $template RemInputLogs, "/var/log/remotelogs/%FROMHOST-IP%/%PROGRAMNAME%.log" 
-   *.* ?RemInputLogs
-
-```
-
-
-7.  
 
 # SIME setup
 ## System Requirements
@@ -126,3 +77,83 @@ Before running the script, please ensure that your system meets the following re
    ./setup_script.sh
    ```
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/SIEM setup.png?raw=true">
+Note: Just type "y" and setup will start.
+
+
+# Setting up “Rsyslog” in SIEM server
+By default ubuntu OS/ubuntu server have already “rsyslog”
+1. To check that, type
+```bash
+   rsyslogd -v 
+```
+or,
+```bash
+   systemctl status rsyslog
+```
+2. Now enable server firewall port to receive logs
+```bash
+   Sudo ufw allow 514/udp
+```
+3. Then check those services
+```bash
+   netstat -4altunp | grep 514
+```
+4. 
+```bash
+   netstat -4altunp | grep 514
+```
+5. Now edit rsyslog.conf file
+```bash
+   nano /etc/rsyslog.conf
+```
+6. Then copy and pest those commands
+```bash
+   # provides UDP syslog reception
+   module(load="imudp")
+   input(type="imudp" port="514")
+   
+   # provides TCP syslog reception
+   module(load="imtcp")
+   input(type="imtcp" port="514")
+   
+   #Custom template to generate the log filename dynamically based on the client's IP address.
+   $template RemInputLogs, "/var/log/remotelogs/%FROMHOST-IP%/%PROGRAMNAME%.log" 
+   *.* ?RemInputLogs
+
+```
+7. Now to test the config file  
+```bash
+   rsyslogd -f /etc/rsyslog.conf -N1
+```
+8. Then restart
+```bash
+   systemctl restart rsyslog
+```
+9. Then our remote log will stored on this location “/var/log/remotelogs/192.168.1.1/”
+```bash
+   Cd /var/log/remotelogs/192.168.1.1/
+	  ls
+```
+10. Now add this “/var/log/remotelogs/192.168.1.1/” path to “filebeat.yaml” file
+```bash
+   Cd /var/log/remotelogs/192.168.1.1/
+	  ls
+```
+11. Now add this “/var/log/remotelogs/192.168.1.1/” path to “filebeat.yaml” file
+```bash
+   Cd /etc/filebeat/
+   ls	
+   nano filebeat.yaml
+```
+<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_file_configuration.png?raw=true">
+12. Now Type in this location
+```bash
+   - /var/log/remotelogs/192.168.1.1/*.log
+```
+Note: "192.168.1.1" this is pfsense IP
+13. Now restart the filebeat
+```bash
+   filebeat setup -e
+	  systemctl restart filebeat
+```
+
