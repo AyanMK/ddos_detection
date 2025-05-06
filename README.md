@@ -155,6 +155,6 @@ Note: "192.168.1.1" this is pfsense IP
 13. Now restart the filebeat
 ```bash
    filebeat setup -e
-	  systemctl restart filebeat
+   systemctl restart filebeat
 ```
 
