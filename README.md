@@ -264,6 +264,7 @@ Go to SIEM Portal
 - Go to console panel
 - Now copy & paste the Kibana pipeline to the console
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/kibana_pipeline_adding_2.png?raw=true">
+
 - Now press the "Play" buttone to check the pipeline
 - If it show "200 - ok" then we are good to go!
 
