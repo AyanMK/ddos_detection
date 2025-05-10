@@ -310,6 +310,7 @@ UDP flood attack
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/udp_attack.png?raw=true">
 
 UDP flood attack detection
+
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/udp_attack_detection.png?raw=true">
 
 
@@ -320,6 +321,7 @@ SYN flood attack
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/syn_attack.png?raw=true">
 
 SYN flood attack detection
+
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/syn_attack_detection.png?raw=true">
 
 ICMP flood attack
@@ -329,6 +331,7 @@ ICMP flood attack
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/icmp_attack.png?raw=true">
 
 ICMP flood attack detection
+
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/icmp_attack_detection.png?raw=true">
 
 
