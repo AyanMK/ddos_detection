@@ -301,7 +301,7 @@ Now open the text file and copy/paste it.
 
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/DDoS attack based on OSI layer.drawio.png?raw=true">
 
-- Those are the commone commands we used.
+## Those are the commone commands we used.
 
 UDP flood attack
 ```bash
