@@ -224,7 +224,7 @@ After installation complet, conferm suricata installation on pfsense
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_4.png?raw=true">
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_5.png?raw=true">
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_6.png?raw=true">
-
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_7.png?raw=true">
 
 ## Suricata custom rule
 ```bash
