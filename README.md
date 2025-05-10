@@ -163,9 +163,9 @@ Note: "192.168.1.1" this is pfsense IP
 ```
 
 # Check the SIEM if it is getting those logs or not
-From PfSense connected VM go to the browser and hit "https://localhost:5601" or "https://<SIEM-server-IP>:5601" 
+From PfSense connected VM go to the browser and hit "https://localhost:5601" or "https://[SIEM-server-IP]:5601" 
 - Username: Elastic
-- Password: <password-that-you-used-in-SIEM-setup>
+- Password: [password-that-you-used-in-SIEM-setup]
 
 Go to "Manu bar or 3 Dot" > "Discover"
 
