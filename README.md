@@ -188,6 +188,7 @@ Access PfSense Web Interface:Open a web browser and log in to the PfSense web in
 
 After installation complet, conferm suricata installation on pfsense
 - Then go to "Installed Package"
+- Suricata is now installed
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_setup_on_pfsense_3.png?raw=true">
 
 
