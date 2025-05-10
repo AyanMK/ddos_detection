@@ -83,7 +83,7 @@ Before running the script, please ensure that your system meets the following re
    ```
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/SIEM setup.png?raw=true">
 Note: Just type "y" and setup will start.
-5. After few time setup will required a password. You may have to type multiple time
+5. After few time setup will required a password. You may have to type multiple time. (We must notedown the password!)
 6. After completing setup it will show "ALL Done". That's mean SIEM setup is done
 
 
@@ -163,4 +163,7 @@ Note: "192.168.1.1" this is pfsense IP
 ```
 
 # Check the SIEM if it is getting those logs or not
-Go to the browser and hit "https://localhost:5601" or "https://<SIEM-server-IP>:5601" 
+From PfSense connected VM go to the browser and hit "https://localhost:5601" or "https://<SIEM-server-IP>:5601" 
+- Username: Elastic
+- Password: <password-that-you-used-in-SIEM-setup>
+
