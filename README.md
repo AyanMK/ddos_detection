@@ -335,17 +335,21 @@ ICMP flood attack detection
 
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/icmp_attack_detection.png?raw=true">
 
+
+
+
+
 # Proof of Concept
-Suricata WEN alert log in pfsense
+- Suricata WEN alert log in pfsense
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/proof_of_concept/Suricata_WEN_alert_log_in_pfsense.png?raw=true">
 
-SIEM platform tcpdump detection
+- SIEM platform tcpdump detection
 ```bash
  tcpdump -i any
 ```
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/proof_of_concept/SIEM_platform_tcpdump_detection.png?raw=true">
 
-Syslog are forwarding in SIEM’s filebeat function
+- Syslog are forwarding in SIEM’s filebeat function
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/proof_of_concept/Syslog_are_forwarding_in_SIEM’s_filebeat_function.png?raw=true">
 
 
