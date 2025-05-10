@@ -1,0 +1,57 @@
+#============================#
+### Suricata custom rule ###
+#============================#
+
+#===============UDP===============#
+# Detect UDP Flood Attack
+alert udp any any -> any any (msg:"Potential UDP Flood Attack Detected"; threshold:type both, track by_src, count 100, seconds 1; sid:100001; rev:1;)
+
+# Detect High-Rate UDP Flood to Any Port
+alert udp any any -> any any (msg:"High-Rate UDP Flood Detected"; flow:stateless; threshold:type both, track by_src, count 500, seconds 1; sid:200001; rev:1;)
+
+# Detect Large UDP Packets (Amplification Attack)
+alert udp any any -> any any (msg:"Possible UDP Amplification Attack"; dsize:>1200; threshold:type both, track by_src, count 100, seconds 1; sid:200002; rev:1;)
+
+# Detect UDP Flood Targeting a Single Destination
+alert udp any any -> $HOME_NET any (msg:"UDP Flood Targeting Network"; threshold:type both, track by_dst, count 1000, seconds 1; sid:200003; rev:1;)
+
+
+#===============ICMP===============#
+# Detect ICMP Flood (Ping Flood)
+alert icmp any any -> any any (msg:"Potential ICMP Flood Attack Detected"; threshold:type both, track by_src, count 50, seconds 1; sid:100002; rev:1;)
+
+# Detect ICMP Echo Request Flood
+alert icmp any any -> any any (msg:"ICMP Ping Flood Detected"; itype:8; threshold:type both, track by_src, count 200, seconds 1; sid:200004; rev:1;)
+
+# Detect Spoofed ICMP Attack
+alert icmp any any -> $HOME_NET any (msg:"Possible ICMP Spoofed Flood"; itype:8; threshold:type both, track by_dst, count 500, seconds 1; sid:200005; rev:1;)
+
+# Detect ICMP Packets with Abnormal Size
+alert icmp any any -> any any (msg:"Abnormal ICMP Packet Size Detected"; dsize:>1000; sid:200006; rev:1;)
+
+
+#===============TCP===============#
+# Detect SYN Flood Attack
+alert tcp any any -> any any (flags:S; msg:"Potential SYN Flood Attack Detected"; threshold:type both, track by_src, count 100, seconds 1; sid:100003; rev:1;)
+
+# Detect High-Rate SYN Flood (Per Source)
+alert tcp any any -> any any (flags:S; msg:"High-Rate SYN Flood Attack"; threshold:type both, track by_src, count 1000, seconds 1; sid:200007; rev:1;)
+
+# Detect Distributed SYN Flood (DDoS)
+alert tcp any any -> $HOME_NET any (flags:S; msg:"Distributed SYN Flood Attack Detected"; threshold:type both, track by_dst, count 5000, seconds 1; sid:200008; rev:1;)
+
+# Detect SYN Packets Without ACKs (Half-Open Attack)
+alert tcp any any -> any any (flags:S; flow:stateless; msg:"Possible SYN-ACK Flood (Half-Open Attack)"; threshold:type both, track by_src, count 200, seconds 1; sid:200009; rev:1;)
+
+# Detect SYN Packets with Uncommon TCP Options
+alert tcp any any -> any any (flags:S; content:"|02 04|"; offset:20; depth:2; msg:"Suspicious TCP SYN with Uncommon Options"; sid:200010; rev:1;)
+
+
+#=============IP Spoofing=============#
+# Detect Private IPs as External Traffic (Spoofed Source)
+alert ip [10.0.0.0/8,192.168.0.0/16,172.16.0.0/12] any -> any any (msg:"Possible IP Spoofing from Private IP"; sid:200011; rev:1;)
+
+
+#=============Optional=============#
+# Detect Random Source Attacks
+alert tcp any any -> $HOME_NET any (flags:S; msg:"Possible Distributed SYN Flood"; threshold:type both, track by_dst, count 500, seconds 1; sid:100004; rev:1;)
