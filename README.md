@@ -67,7 +67,7 @@ Before running the script, please ensure that your system meets the following re
 ## Usage
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/AyanMK/ddos_detection/sem_setup
+   git clone https://github.com/AyanMK/ddos_detection/siem_setup
    ```
 2. Navigate to the repository's directory:
    ```bash
