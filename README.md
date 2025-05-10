@@ -220,13 +220,33 @@ After installation complet, conferm suricata installation on pfsense
 ```
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_3.png?raw=true">
 
-4. 
+4. Now go to "suricata_54260_em0". Remember "54260" this number may be different on your time. You must check the "em0" then get inside it.
+```bash
+ cd suricata_54260_em0
+```
+Then edit "suricata.yaml"
+```bash
+ ee suricata.yaml
+```
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_4.png?raw=true">
+
+5. Go to line "346" and remove the default rule and custome rule like under image. Then press "Esc" > Save & exit
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_5.png?raw=true">
+
+6. Now go to "rules" directory
+```bash
+ cd /rules
+```
+Now edit "custom.rules"
+```bash
+ ee custom.rules
+```
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_6.png?raw=true">
+
+7. Add thos bellow rule. Then press "Esc" > Save & exit
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_7.png?raw=true">
 
-## Suricata custom rule
+## Suricata custom rule.
 ```bash
 #============================#
 ### Suricata custom rule ###
