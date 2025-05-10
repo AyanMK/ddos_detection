@@ -140,12 +140,18 @@ or,
 9. Then our remote log will stored on this location “/var/log/remotelogs/192.168.1.1/”
 ```bash
    Cd /var/log/remotelogs/192.168.1.1/
+```
+```bash
    ls
 ```
 10. Now add this “/var/log/remotelogs/192.168.1.1/” path to “filebeat.yaml” file
 ```bash
    Cd /etc/filebeat/
-   ls	
+```
+```bash
+   ls
+```
+```bash	
    nano filebeat.yaml
 ```
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_file_configuration.png?raw=true">
@@ -159,6 +165,8 @@ Note: "192.168.1.1" this is pfsense IP
 12. Now restart the filebeat
 ```bash
    filebeat setup -e
+```
+```bash
    systemctl restart filebeat
 ```
 
@@ -203,7 +211,19 @@ After installation complet, conferm suricata installation on pfsense
 - Then press "8"
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_2.png?raw=true">
 
-3. 
+3. Then go to this location "/usr/local/etc/suricata" by this command
+```bash
+ cd /usr/local/etc/suricata
+```
+```bash
+ ls
+```
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_3.png?raw=true">
+
+4. 
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_4.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_5.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_6.png?raw=true">
 
 
 ## Suricata custom rule
