@@ -188,7 +188,7 @@ Then go to "Available Package" > Search for "suricata" and click "Install."
 After installation complet, conferm suricata installation on pfsense
 Then go to "Installed Package" 
 
-<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_setup_on_pfsense_1.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_setup_on_pfsense_2.png?raw=true">
 
 
 
