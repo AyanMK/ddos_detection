@@ -300,6 +300,7 @@ Now open the text file and copy/paste it.
 ## All types of DoS/DDoS attacks
 
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/DDoS attack based on OSI layer.drawio.png?raw=true">
+We mainly used UDP, SYN, ICMP attack.
 
 ## Those are the commone commands we used.
 
