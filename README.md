@@ -313,10 +313,294 @@ Go to SIEM Portal
 - "3 Dot Manu" > Management > Deb Tools
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/kibana_pipeline_adding_1.png?raw=true">
 
-Now copy & paste the Kibana pipeline
+Now copy & paste the Kibana pipeline to the console
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/kibana_pipeline_adding_2.png?raw=true">
 
+## Kibana Pipeline
 ```bash
+GET _ingest/pipeline/
+
+PUT _ingest/pipeline/suricata_pipeline
+{
+  "description": "Simplified Pipeline to parse Suricata logs",
+  "processors": [
+    {
+      "dissect": {
+        "field": "message",
+        "pattern": "%{timestamp} %{src_ip} %{process}[%{pid}]: %{alert_details}"
+      }
+    },
+    {
+      "dissect": {
+        "field": "alert_details",
+        "pattern": "%{alert} [Classification: %{classification}] [Priority: %{priority}] {%{protocol}} %{src_ip}:%{src_port} -> %{dst_ip}:%{dst_port}"
+      }
+    },
+    {
+      "add_fields": {
+        "fields": {
+          "event.category": "network"
+        }
+      }
+    },
+    {
+      "remove": {
+        "field": "message"
+      }
+    }
+  ]
+}
+
+PUT _ingest/pipeline/suricata_pipeline
+{
+  "description": "Simplified Pipeline to parse Suricata logs",
+  "processors": [
+    {
+      "dissect": {
+        "field": "message",
+        "pattern": "%{timestamp} %{src_ip} %{process}[%{pid}]: %{alert_details}"
+      }
+    },
+    {
+      "dissect": {
+        "field": "alert_details",
+        "pattern": "%{alert} [Classification: %{classification}] [Priority: %{priority}] {%{protocol}} %{src_ip}:%{src_port} -> %{dst_ip}:%{dst_port}"
+      }
+    },
+    {
+      "set": {
+        "field": "event.category",
+        "value": "network"
+      }
+    },
+    {
+      "remove": {
+        "field": "message"
+      }
+    }
+  ]
+}
+
+
+
+DELETE _ingest/pipeline/suricata_pipeline
+
+PUT /filebeat-*/_mapping
+{
+  "properties": {
+    "process": {
+      "type": "keyword"
+    }
+  }
+}
+
+
+GET /filebeat-*/_mapping/field/process
+
+GET /_template/filebeat-*
+
+PUT /_index_template/filebeat-7.17.13
+{
+  "index_patterns": ["filebeat-7.17.13-*"],
+  "template": {
+    "mappings": {
+      "properties": {
+        "process": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
+
+GET /filebeat-*/_mapping/field/process
+GET /filebeat-7.17.13-*/_mapping/field/process
+
+GET /filebeat-7.17.13-*/_mapping/field/process
+GET /_alias/filebeat-7.17.13
+GET /_index_template/filebeat-7.17.13
+
+PUT /_index_template/filebeat-7.17.13
+{
+  "index_patterns": ["filebeat-7.17.13-*"],
+  "template": {
+    "mappings": {
+      "properties": {
+        "process": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
+
+POST /filebeat-7.17.13/_rollover
+
+DELETE /filebeat-7.17.13-2025.02.27-000001
+
+PUT /filebeat-7.17.13-2025.02.27-000002
+{
+  "aliases": {
+    "filebeat-7.17.13": {
+      "is_write_index": true
+    }
+  },
+  "mappings": {
+    "properties": {
+      "process": {
+        "type": "keyword"
+      }
+    }
+  }
+}
+
+GET /filebeat-7.17.13-*/_mapping/field/process
+
+POST /filebeat-7.17.13/_rollover
+
+
+PUT /_index_template/filebeat-7.17.13
+{
+  "index_patterns": ["filebeat-*"],
+  "template": {
+    "mappings": {
+      "properties": {
+        "process": {
+          "type": "keyword"
+        },
+        "alert": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "classification": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "src_ip": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "dst_ip": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "timestamp": {
+          "type": "date"
+        }
+      }
+    }
+  }
+}
+
+
+
+
+PUT /filebeat-7.17.13-2025.02.27-000002
+{
+  "aliases": {
+    "filebeat-7.17.13": {
+      "is_write_index": true
+    }
+  },
+  "mappings": {
+    "properties": {
+      "process": {
+        "type": "keyword"
+      }
+    }
+  }
+}
+
+
+GET /_index_template/filebeat-7.17.13
+{
+  "mappings": {}
+}
+
+PUT /_index_template/filebeat-7.17.13
+{
+  "index_patterns": ["filebeat-7.17.13-*"],
+  "template": {
+    "mappings": {
+      "properties": {
+        "process": {
+          "type": "keyword"  
+        }
+      }
+    }
+  }
+}
+
+
+POST /filebeat-7.17.13-*/_alias/filebeat-7.17.13
+
+
+GET _ingest/pipeline/suricata_pipeline
+
+PUT _ingest/pipeline/suricata_pipeline
+{
+  "description": "Simplified Pipeline to parse Suricata logs",
+  "processors": [
+    {
+      "dissect": {
+        "field": "message",
+        "pattern": "%{timestamp} %{src_ip} %{process}[%{pid}]: %{alert_details}"
+      }
+    },
+    {
+      "dissect": {
+        "field": "alert_details",
+        "pattern": "%{alert} [Classification: %{classification}] [Priority: %{priority}] {%{protocol}} %{src_ip}:%{src_port} -> %{dst_ip}:%{dst_port}"
+      }
+    },
+    {
+      "set": {
+        "field": "event.category",
+        "value": "network"
+      }
+    },
+    {
+      "remove": {
+        "field": "message"
+      }
+    }
+  ]
+}
+
+
+
+POST _ingest/pipeline/suricata_pipeline/_simulate
+{
+  "docs": [
+    {
+      "_source": {
+        "message": "2025-02-26T16:53:05+06:00 192.168.1.1 suricata[94381]: [1:2200075:2] SURICATA UDPv4 invalid checksum [Classification: Generic Protocol Command Decode] [Priority: 3] {UDP} 192.168.1.1:514 -> 192.168.1.104:514"
+      }
+    }
+  ]
+}
+
+GET _ingest/pipeline/suricata_pipeline
 
 ```
 
