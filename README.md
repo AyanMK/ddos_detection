@@ -193,7 +193,17 @@ After installation complet, conferm suricata installation on pfsense
 
 
 # Add suricata custom rule on PfSense(Suricata)
+1. Now check the PfSense WAN port (Access PfSense Web Interface)
+- Go to "Services" > "Suricata"
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_1.png?raw=true">
 
+2. Now ssh to PfSense
+- Open terminal and type "ssh admin@192.168.1.1"
+- Password is pfsense password or diffolt password is "pfsense"
+- Then press "8"
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_2.png?raw=true">
+
+3. 
 
 
 ## Suricata custom rule
