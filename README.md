@@ -174,7 +174,7 @@ Go to "Manu bar or 3 Dot" > "Discover"
 Then select "filebeat" if not selected and then "Refresh". Then log will be visible.
 
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_log_check_2.png?raw=true">
-
+Yes! SIEM is getting logs.
 
 
 
