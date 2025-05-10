@@ -27,7 +27,8 @@ Note: After setting up server, enable pfSense to forward its log to that server.
 Note: Before doing this you must setup an Ubuntu server or OS. Which must set under the pfsense internal network.
  
  We used ubuntu os that is why we can brows PfSense admin portal.
- - hit the brouser with "https://192.168.1.1" 
+ 
+ hit the brouser with "https://192.168.1.1" 
  - Username: admin 
  - Password: pfsense
 
