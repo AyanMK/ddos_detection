@@ -57,7 +57,7 @@ Check the output log here!
 
 
 
-# SIME setup
+# SIEM setup
 ## System Requirements
 Before running the script, please ensure that your system meets the following requirements:
 - Ubuntu OS
@@ -67,11 +67,11 @@ Before running the script, please ensure that your system meets the following re
 ## Usage
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/AyanMK/ddos_detection/sime_setup
+   git clone https://github.com/AyanMK/ddos_detection/sem_setup
    ```
 2. Navigate to the repository's directory:
    ```bash
-   cd sime_setup
+   cd siem_setup
    ```
 3. Make the setup_script.sh executable:
    ```bash
