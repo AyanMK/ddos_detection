@@ -36,23 +36,23 @@ Then,
 
 1. After login to the pfSense Dashboard
 2. Go to	"Status" > "System Logs"
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_1.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_1.png?raw=true">
 
 3. Then go to "settings"
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_2.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_2.png?raw=true">
 
 4. Scroll down and enable remote logging
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_3.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_3.png?raw=true">
 
 5. Scroll down and set the IP of the server (which will store the logs)
 6. Then save.
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_4.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/pfsense_dashboard_4.png?raw=true">
 
 7. Check the dumps using the command to the serve,
  - tcpdump -i <interface> port 514
  - tcpdump -i enp0s3 port 514
 
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/server_log_capture.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/server_log_capture.png?raw=true">
 Check the output log here!
 
 
@@ -81,7 +81,7 @@ Before running the script, please ensure that your system meets the following re
    ```bash
    ./setup_script.sh
    ```
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/SIEM setup.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/SIEM setup.png?raw=true">
 Note: Just type "y" and setup will start.
 5. After few time setup will required a password. You may have to type multiple time. (We must notedown the password!)
 6. After completing setup it will show "ALL Done". That's mean SIEM setup is done
@@ -148,7 +148,7 @@ or,
    ls	
    nano filebeat.yaml
 ```
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_file_configuration.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_file_configuration.png?raw=true">
 
 11. Now Type this in that location and seve
 ```bash
@@ -169,11 +169,11 @@ From PfSense connected VM go to the browser and hit "https://localhost:5601" or 
 
 Go to "Manu bar or 3 Dot" > "Discover"
 
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_log_check_1.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_log_check_1.png?raw=true">
 
 Then select "filebeat" if not selected and then "Refresh". Then log will be visible.
 
-<img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_log_check_2.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_log_check_2.png?raw=true">
 Yes! SIEM is getting logs.
 
 
