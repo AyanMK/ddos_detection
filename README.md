@@ -193,7 +193,7 @@ After installation complet, conferm suricata installation on pfsense
 
 
 # Add suricata custom rule on PfSense(Suricata)
-1. Now check the PfSense WAN port (Access PfSense Web Interface)
+1. Check the PfSense WAN port (Access PfSense Web Interface)
 - Go to "Services" > "Suricata"
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_1.png?raw=true">
 
