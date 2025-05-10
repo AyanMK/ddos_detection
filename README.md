@@ -273,3 +273,7 @@ Now copy & paste the Kibana pipeline to the console
 ```
 Now open the text file and copy/paste it.
 
+# Create a Attack Monitoring Dashboard
+- 
+
+
