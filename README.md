@@ -278,6 +278,11 @@ Go to SIEM Portal
 Now open the text file and copy/paste it.
 
 # Create a Attack Monitoring Dashboard
-- 
+- "3 Dot Manu" > Management > Deb Tools
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/create_kibana_dashboard_1.png?raw=true">
+
+- You can use our layout also.
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/create_kibana_dashboard_2.png?raw=true">
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/create_kibana_dashboard_3.png?raw=true">
 
 
