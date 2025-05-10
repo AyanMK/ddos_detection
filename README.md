@@ -308,9 +308,15 @@ alert ip [10.0.0.0/8,192.168.0.0/16,172.16.0.0/12] any -> any any (msg:"Possible
 alert tcp any any -> $HOME_NET any (flags:S; msg:"Possible Distributed SYN Flood"; threshold:type both, track by_dst, count 500, seconds 1; sid:100004; rev:1;)
 ```
 
+# Kibana Pipeline Adding
+Go to SIEM Portal
+- "3 Dot Manu" > Management > Deb Tools
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/kibana_pipeline_adding_1.png?raw=true">
 
+Now copy & paste the Kibana pipeline
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/kibana_pipeline_adding_2.png?raw=true">
 
+```bash
 
-
-
+```
 
