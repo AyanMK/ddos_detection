@@ -71,7 +71,7 @@ Before running the script, please ensure that your system meets the following re
    ```
 2. Navigate to the repository's directory:
    ```bash
-   cd ddos_detection
+   cd sime_setup
    ```
 3. Make the setup_script.sh executable:
    ```bash
