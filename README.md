@@ -21,10 +21,15 @@ Ubuntu server or OS setup in virtualbox. For our R&D we used ubuntu OS. Ubuntu s
 ## - Network
 Network adapters 1:	"Internal Network"
 
-Note: After setting up server, enable pfSense to forward its log to that server
+Note: After setting up server, enable pfSense to forward its log to that server.
 
 # PfSense log forwarding to the server
-Note: Before doing this you must setup an Ubuntu server or OS. Which must set under the pfsense internal network 
+Note: Before doing this you must setup an Ubuntu server or OS. Which must set under the pfsense internal network. 
+We used ubuntu os that is why we can brows PfSense admin portal. 
+hit the brouser with "https://192.168.1.1"
+Username: admin
+Password: pfsense
+Then,
 
 1. After login to the pfSense Dashboard
 2. Go to	"Status" > "System Logs"
@@ -140,7 +145,7 @@ or,
 ```
 <img width="615" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_file_configuration.png?raw=true">
 
-11. Now Type this in that location
+11. Now Type this in that location and seve
 ```bash
    - /var/log/remotelogs/192.168.1.1/*.log
 ```
