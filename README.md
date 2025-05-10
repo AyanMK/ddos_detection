@@ -235,7 +235,7 @@ Then edit "suricata.yaml"
 
 6. Now go to "rules" directory
 ```bash
- cd /rules
+ cd rules
 ```
 Now edit "custom.rules"
 ```bash
@@ -243,7 +243,7 @@ Now edit "custom.rules"
 ```
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_6.png?raw=true">
 
-7. Add thos bellow rule. Then press "Esc" > Save & exit
+7. Add thos bellow rule (copy & paste). Then press "Esc" > Save & exit
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/suricata_custom_rule_add_7.png?raw=true">
 
 ## Suricata custom rule.
