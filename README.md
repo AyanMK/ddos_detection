@@ -175,7 +175,7 @@ From PfSense connected VM go to the browser and hit "https://localhost:5601" or 
 - Username: Elastic
 - Password: [password-that-you-used-in-SIEM-setup]
 
-Go to "Manu bar or 3 Dot" > "Discover"
+Go to "Manu bar or 3 Dot" > "Analystics" >"Discover"
 
 <img width="800" alt="main_pic" src="https://github.com/AyanMK/ddos_detection/blob/main/assets/filebeat_log_check_1.png?raw=true">
 
